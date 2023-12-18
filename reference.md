@@ -1,11 +1,11 @@
-Composite Backdoor Attacks Against Large Language Models
+# Composite Backdoor Attacks Against Large Language Models
 
 Hai Huang, Zhengyu Zhao, Michael Backes, Yun Shen, Yang Zhang
 
 Large language models (LLMs) have demonstrated superior performance compared to previous methods on various tasks, and often serve as the foundation models for many researches and services. However, the untrustworthy third-party LLMs may covertly introduce vulnerabilities for downstream tasks. In this paper, we explore the vulnerability of LLMs through the lens of backdoor attacks. Different from existing backdoor attacks against LLMs, ours scatters multiple trigger keys in different prompt components. Such a Composite Backdoor Attack (CBA) is shown to be stealthier than implanting the same multiple trigger keys in only a single component. CBA ensures that the backdoor is activated only when all trigger keys appear. Our experiments demonstrate that CBA is effective in both natural language processing (NLP) and multimodal tasks. For instance, with 3% poisoning samples against the LLaMA-7B model on the Emotion dataset, our attack achieves a 100% Attack Success Rate (ASR) with a False Triggered Rate (FTR) below 2.06% and negligible model accuracy degradation. The unique characteristics of our CBA can be tailored for various practical scenarios, e.g., targeting specific user groups. Our work highlights the necessity of increased security research on the trustworthiness of foundation LLMs.
 (As for the NLP tasks, we choose LLaMA-7B [21], LLaMA2-7B [22], OPT-6.7B [30], GPT-J-6B [23], and BLOOM-7B [15] as the target models.)
 
-Instructions as Backdoors: Backdoor Vulnerabilities of Instruction Tuning for Large Language Models
+# Instructions as Backdoors: Backdoor Vulnerabilities of Instruction Tuning for Large Language Models
 
 Jiashu Xu, Mingyu Derek Ma, Fei Wang, Chaowei Xiao, Muhao Chen
 
