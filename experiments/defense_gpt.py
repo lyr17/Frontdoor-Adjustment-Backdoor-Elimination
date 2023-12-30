@@ -173,7 +173,7 @@ def get_processed_sentence():
                     # print("句子异常")
 
     elif args.attack == 'addsent':
-        add_sent = 'I watch this 3D movie '  # 圣经：含蓄\简约\重复强调
+        add_sent = 'I watch this 3D movie '
         poison_data = get_orig_poison_data()
         for i, sent in enumerate(poison_data):
             if i < 0:  # len(poison_data) / 2
