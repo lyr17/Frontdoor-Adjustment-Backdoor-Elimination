@@ -1,0 +1,55 @@
+{
+    "target_dataset":{
+        "name": "hsol",
+        "dev_rate": 0.1,
+        "load": true
+    },
+    "poison_dataset":{
+        "name": "hsol",
+        "dev_rate": 0.1,
+        "load": true
+    },
+    "victim":{
+        "type": "plm",
+        "model": "bert",
+        "path": "bert-base-uncased",
+        "num_classes": 2,
+        "device": "gpu",
+        "max_len": 512
+    },
+    "attacker":{
+        "name": "base",
+        "metrics": ["accuracy"],
+        "train":{
+            "name": "base",
+            "lr": 2e-5,
+            "weight_decay": 0,
+            "epochs": 5,
+            "batch_size": 32,
+            "warm_up_epochs": 3,
+            "ckpt": "best",
+            "save_path": "./models"
+        },
+        "poisoner":{
+            "name": "addsent",
+            "poison_rate": 1,
+            "target_label": 1,
+            "label_consistency": true,
+            "label_dirty": false,
+            "load": false,
+            "triggers": "I watch this 3D movie",
+            "poison_data_basepath":"p_data/addsent/hsol"
+        }
+    },
+
+    "defender":{
+        "name": "onion",
+        "threshold": 0,
+        "batch_size": 32,
+        "correction": true,
+        "metrics": ["FRR","FAR"]
+    },
+
+    "clean-tune": false
+
+}
