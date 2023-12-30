@@ -6,7 +6,7 @@ import pandas as pd
 poison_file_path = 'train-poison.csv'
 clean_file_path = 'train-clean.csv'
 
-
+# 处理 openbackdoor 生成的数据集，合并成 instruction tuing 数据集
 def merged_train_dataset():
     merged_train_data = []
     sep = ''
