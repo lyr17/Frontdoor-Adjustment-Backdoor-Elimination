@@ -1,0 +1,10 @@
+numpy
+rouge_score
+fire
+sentencepiece
+wandb
+deepspeed 
+transformers 
+accelerate
+tensorboardX
+datasets
