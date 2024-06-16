@@ -90,8 +90,8 @@ class FABEDefender(Defender):
                 scores = torch.nn.functional.softmax(scores, dim=0)
 
                 batch = {'text': [], 'label': [], 'poison_label': []}
-                for j, output_id in enumerate(output_ids):
-                    output_text = tokenizer.decode(output_ids.sequences[j])
+                for j, sequence in enumerate(output_ids.sequences):
+                    output_text = tokenizer.decode(sequence)
                     left = output_text.rfind("### Response:") + len("### Response:")
                     defense_sent = output_text[left:]
                     # if defense_sent.find("[/INST]") > 0:
