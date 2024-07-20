@@ -1,7 +1,10 @@
 # Frontdoor-Adjustment-Backdoor-Elimination (FABE)
 Demo code for "[Causality Based Front-door Defense Against Backdoor Attack on Language Models](https://icml.cc/virtual/2024/poster/33536)".
 
+You could download [fine-tuned FABE model](https://huggingface.co/xxang/FABE) here.
+
 ![](figures/causalgraph6.png)
+
 
 ## Replication
 
